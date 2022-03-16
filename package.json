@@ -1,0 +1,44 @@
+{
+  "name": "kodtestunikum",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Robin Friholm <robin_friholm@hotmail.com>",
+  "scripts": {
+    "dev:vite": "vite",
+    "dev:relay": "yarn relay --watch",
+    "dev": "run-p dev:*",
+    "build": "yarn relay && tsc && vite build",
+    "serve": "vite preview",
+    "update-schema": "get-graphql-schema https://swapi-graphql.netlify.app/.netlify/functions/index > schema.graphql && yarn relay",
+    "relay": "relay-compiler",
+    "typecheck": "tsc --pretty --skipLibCheck --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mdx-js/react": "^2.0.0",
+    "prop-types": "^15.8.1",
+    "ramda": "^0.28.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-relay": "13.0.0-rc.0",
+    "react-router-dom": "^6.2.2",
+    "relay-runtime": "13.0.0-rc.0",
+    "theme-ui": "^0.13.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-relay": "13.0.1",
+    "@types/relay-runtime": "13.0.1",
+    "@vitejs/plugin-react": "^1.0.0",
+    "get-graphql-schema": "^2.1.2",
+    "npm-run-all": "^4.1.5",
+    "relay-compiler": "13.0.0-rc.0",
+    "relay-config": "13.0.0-rc.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-relay": "^1.0.7"
+  }
+}
